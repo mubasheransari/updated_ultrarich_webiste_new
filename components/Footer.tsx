@@ -4,27 +4,27 @@ import Link from "next/link";
 const SOCIALS = [
   {
     label: "Facebook",
-    href: "#",
+    href: "https://www.facebook.com/people/Mezan-UltraRich/61592985491801/?rdid=n2ZFIutaR8HTrDaT&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F198mbvxGjV%2F",
     path: "M14 8h3V5h-3c-2.2 0-4 1.8-4 4v2H7v3h3v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1Z",
   },
   {
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/mezanultrarich?igsi=bmcyNTBiNzIwZWY2",
     path: "M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5ZM17.5 6a1.2 1.2 0 1 1-1.2 1.2A1.2 1.2 0 0 1 17.5 6Z",
   },
   {
     label: "YouTube",
-    href: "#",
+    href: "https://www.youtube.com/@MezanUltraRich",
     path: "M23 12s0-3.6-.5-5.2a2.9 2.9 0 0 0-2-2C18.8 4.3 12 4.3 12 4.3s-6.8 0-8.5.5a2.9 2.9 0 0 0-2 2C1 8.4 1 12 1 12s0 3.6.5 5.2a2.9 2.9 0 0 0 2 2c1.7.5 8.5.5 8.5.5s6.8 0 8.5-.5a2.9 2.9 0 0 0 2-2C23 15.6 23 12 23 12ZM10 15.5v-7l6 3.5-6 3.5Z",
   },
   {
     label: "TikTok",
-    href: "#",
+    href: "https://www.tiktok.com/@mezan.ultra.rich?_r=1&_t=ZS-97rCPle1iIT",
     path: "M19.5 7.2a5.8 5.8 0 0 1-3.4-1.1v7.1a5.8 5.8 0 1 1-5-5.7v3a2.8 2.8 0 1 0 2 2.7V2h3a5.8 5.8 0 0 0 3.4 2.8v2.4Z",
   },
   {
     label: "LinkedIn",
-    href: "#",
+    href: "https://www.linkedin.com/company/mezan-tea/",
     path: "M5 3.5A2.5 2.5 0 1 1 5 8.5 2.5 2.5 0 0 1 5 3.5ZM2.8 10h4.4v11H2.8V10Zm7 0h4.2v1.5h.1c.6-1 1.9-2 4-2 4.3 0 5.1 2.8 5.1 6.4V21h-4.4v-4.5c0-1.1 0-2.5-1.6-2.5s-1.9 1.2-1.9 2.4V21H9.8V10Z",
   },
 ];
@@ -77,7 +77,7 @@ export default function Footer() {
             className="flex flex-col items-center gap-2"
           >
             {/* Feature Icon */}
-            <div className="flex h-20 w-28 items-center justify-center">
+            <div className="flex h-20 w-58 items-center justify-center">
               <Image
                 src={item.image}
                 alt={item.alt}
@@ -92,7 +92,7 @@ export default function Footer() {
               {item.title}
             </p>
 
-            {/* Subheading - reduced gap */}
+            {/* Subheading */}
             <p className="-mt-1 text-sm font-normal leading-tight text-black/75">
               {item.subtitle}
             </p>
@@ -138,17 +138,19 @@ export default function Footer() {
             Follow Us
           </h4>
 
-          <div className="mt-3 flex gap-3">
+          <div className="mt-4 flex flex-wrap gap-4">
             {SOCIALS.map((social) => (
               <a
                 key={social.label}
                 href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={social.label}
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-brand-red transition-all duration-300 hover:-translate-y-1 hover:bg-brand-gold"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-brand-red transition-all duration-300 hover:-translate-y-1 hover:bg-brand-gold"
               >
                 <svg
-                  width="16"
-                  height="16"
+                  width="24"
+                  height="24"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   aria-hidden="true"

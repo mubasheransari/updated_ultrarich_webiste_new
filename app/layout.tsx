@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/components/LanguageProvider";
@@ -24,21 +25,30 @@ export const metadata: Metadata = {
     "Mezan Ultra Rich brings together richness, depth, and satisfaction in a tea experience worthy of the moments that matter most.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html
       lang="en"
       className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-white font-body">
+      <body
+        suppressHydrationWarning={true}
+        className="min-h-full bg-white font-body"
+      >
         <LanguageProvider>
-          <Header />
+          <div className="flex min-h-screen flex-col">
+            <Header />
 
-          <main className="flex-1 pt-[50px]">
-            {children}
-          </main>
+            <main className="flex-1 pt-[101px]">
+              {children}
+            </main>
 
-          <Footer />
+            <Footer />
+          </div>
         </LanguageProvider>
       </body>
     </html>

@@ -228,7 +228,7 @@ export default function ProductDetail({
                   ACTION
               ================================================= */}
               <div className="mt-10 flex flex-wrap gap-4">
-                <button
+                {/* <button
                   type="button"
                   className="
                     min-w-[190px]
@@ -248,7 +248,7 @@ export default function ProductDetail({
                   "
                 >
                   Add to Cart
-                </button>
+                </button> */}
 
                 <Link
                   href="/products"

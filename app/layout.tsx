@@ -34,7 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <LanguageProvider>
           <Header />
 
-          <main className="flex-1 pt-[115px]">
+          <main className="flex-1 pt-[50px]">
             {children}
           </main>
 
